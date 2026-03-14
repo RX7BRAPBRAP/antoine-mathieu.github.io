@@ -23,7 +23,7 @@
     <meta property="og:url" content="https://rx7brapbrap.github.io/portfolio/">
     <meta property="og:title" content="Antoine Mathieu - Développeur Web & Architecte Logiciel">
     <meta property="og:description" content="Portfolio professionnel - Développeur web passionné par l'architecture logicielle et la conception d'applications. Découvrez mes projets et compétences.">
-    <meta property="og:image" content="https://rx7brapbrap.github.io/portfolio/img/preview.png">
+    <meta property="og:image" content="https://rx7brapbrap.github.io/portfolio/assets/img/preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     
@@ -54,10 +54,10 @@
     <link rel="sitemap" href="https://rx7brapbrap.github.io/portfolio/sitemap.xml">
     
     <!-- Ressources -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
     <link rel="canonical" href="https://rx7brapbrap.github.io/portfolio/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -70,6 +70,13 @@
                 <a href="#skills">Compétences</a>
                 <a href="#projects">Projets</a>
                 <a href="#contact">Contact</a>
+                <div class="cv-dropdown">
+                    <button class="cv-btn-nav">CV</button>
+                    <div class="cv-menu-nav">
+                        <a href="CV-Antoine-Mathieu-FR.pdf" download class="cv-option-nav">🇫🇷 Français</a>
+                        <a href="CV-Antoine-Mathieu-EN.pdf" download class="cv-option-nav">🇬🇧 English</a>
+                    </div>
+                </div>
             </nav>
             <button class="menu-toggle">☰</button>
         </div>
@@ -127,81 +134,92 @@
             <div class="education-section">
                 <h3>Parcours Académique</h3>
                 <div class="education-timeline">
-                    <div class="education-item">
-                        <div class="education-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="education-content">
-                            <div class="education-info">
-                                <h4>IUT Reims</h4>
-                                <p class="education-degree">BUT Informatique</p>
+                    <a href="https://www.univ-reims.fr/formation/catalogue-de-formation/bachelor-universitaire-de-technologie-informatique,23515,38949.html?args=R9qFsCnMmKDtxCa17YTDkHVqaqbfYRXwwTnCVt2witCDUIiVoUdkeMDp%2AXGEGm2SMIhvMbuZ3_kOrRxvJlk6dOorIryuNioRCyFFyPAvhl9tCdwYdtHRrwAvNC1tDg_H&formation_id=1584" target="_blank" class="education-link">
+                        <div class="education-item">
+                            <div class="education-icon">
+                                <i class="fas fa-graduation-cap"></i>
                             </div>
-                            <div class="education-date-result">
-                                <p class="education-date"><span class="date-badge">Depuis sept. 2024</span></p>
-                                <p class="education-detail">Spécialisation : Développement web et conception d'applications</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="education-item">
-                        <div class="education-icon">
-                            <i class="fa-solid fa-user-nurse"></i>
-                        </div>
-                        <div class="education-content">
-                            <div class="education-info">
-                                <h4>IFSI René Miquel</h4>
-                                <p class="education-degree">Diplôme d'État d'Infirmier</p>
-                            </div>
-                            <div class="education-date-result">
-                                <p class="education-date"><span class="date-badge">2023</span></p>
-                                <p class="education-detail">Charleville-Mézières</p>
+                            <div class="education-content">
+                                <div class="education-info">
+                                    <h4>IUT Reims</h4>
+                                    <p class="education-degree">BUT Informatique</p>
+                                </div>
+                                <div class="education-date-result">
+                                    <p class="education-date"><span class="date-badge">Depuis sept. 2024</span></p>
+                                    <p class="education-detail">Spécialisation : Développement web et conception d'applications</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="education-item">
-                        <div class="education-icon">
-                            <i class="fa-solid fa-school-flag"></i>
-                        </div>
-                        <div class="education-content">
-                            <div class="education-info">
-                                <h4>Lycée Saint Paul</h4>
-                                <p class="education-degree">Baccalauréat Scientifique</p>
+                    </a>
+                    <a href="https://www.ifsi08.fr/formation-infirmier/metier" target="_blank" class="education-link">
+                        <div class="education-item">
+                            <div class="education-icon">
+                                <i class="fa-solid fa-user-nurse"></i>
                             </div>
-                            <div class="education-date-result">
-                                <p class="education-date"><span class="date-badge">2020</span></p>
-                                <p class="education-detail">Charleville-Mézières</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="education-item">
-                        <div class="education-icon">
-                            <i class="fa-solid fa-person-swimming fa-flip-horizontal"></i>
-                        </div>
-                        <div class="education-content">
-                            <div class="education-info">
-                                <h4>Centre Aquatique Bernard Albin</h4>
-                                <p class="education-degree">BNSSA</p>
-                            </div>
-                            <div class="education-date-result">
-                                <p class="education-date"><span class="date-badge">2020</span></p>
-                                <p class="education-detail">Brevet National de Sécurité et de Sauvetage Aquatique</p>
+                            <div class="education-content">
+                                <div class="education-info">
+                                    <h4>IFSI René Miquel</h4>
+                                    <p class="education-degree">Diplôme d'État d'Infirmier</p>
+                                    
+                                </div>
+                                <div class="education-date-result">
+                                    <p class="education-date"><span class="date-badge">2023</span></p>
+                                    <p class="education-detail">IDE</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="education-item">
-                        <div class="education-icon">
-                            <i class="fas fa-shield"></i>
-                        </div>
-                        <div class="education-content">
-                            <div class="education-info">
-                                <h4>3e Régiment d'Hélicoptères de Combat</h4>
-                                <p class="education-degree">Certificat de Préparation Militaire</p>
+                    </a>
+                    <a href="https://www.lycee-polyvalent-cfa-saint-paul.com/formations-lycee" target="_blank" class="education-link">
+                        <div class="education-item">
+                            <div class="education-icon">
+                                <i class="fa-solid fa-school-flag"></i>
                             </div>
-                            <div class="education-date-result">
-                                <p class="education-date"><span class="date-badge">2018</span></p>
-                                <p class="education-detail">Étain</p>
+                            <div class="education-content">
+                                <div class="education-info">
+                                    <h4>Lycée Saint Paul</h4>
+                                    <p class="education-degree">Baccalauréat Scientifique</p>
+                                </div>
+                                <div class="education-date-result">
+                                    <p class="education-date"><span class="date-badge">2020</span></p>
+                                    <p class="education-detail">Spécialisation : Physique-Chimie</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
+                    <a href="https://equipementsludiques.ardenne-metropole.fr/formation/" target="_blank" class="education-link">
+                        <div class="education-item">
+                            <div class="education-icon">
+                                <i class="fa-solid fa-person-swimming fa-flip-horizontal"></i>
+                            </div>
+                            <div class="education-content">
+                                <div class="education-info">
+                                    <h4>Centre Aquatique Bernard Albin</h4>
+                                    <p class="education-degree">Brevet National de Sécurité et de Sauvetage Aquatique</p>
+                                </div>
+                                <div class="education-date-result">
+                                    <p class="education-date"><span class="date-badge">2020</span></p>
+                                    <p class="education-detail">BNSSA </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://concours-armee.fr/blog/preparation-militaire-terre-pmt/#:~:text=Les%20principaux%20types%20de%20Préparation" target="_blank" class="education-link">
+                        <div class="education-item">
+                            <div class="education-icon">
+                                <i class="fas fa-shield"></i>
+                            </div>
+                            <div class="education-content">
+                                <div class="education-info">
+                                    <h4>3e Régiment d'Hélicoptères de Combat</h4>
+                                    <p class="education-degree">Préparation Militaire Terre</p>
+                                </div>
+                                <div class="education-date-result">
+                                    <p class="education-date"><span class="date-badge">2018</span></p>
+                                    <p class="education-detail">PMT</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -312,16 +330,42 @@
             <div class="projects-grid">
                 <div class="project-card featured">
                     <div class="project-badge">Projet Phare</div>
-                    <div class="project-header">
-                        <h3>Resto'N - SAE 3.02</h3>
-                        <p class="project-subtitle">Système de Gestion de Restaurant - Full Stack</p>
-                    </div>
-                    <p class="project-description">Projet académique d'envergure : développement complet d'une plateforme de gestion de restaurant. Implémentation des réservations, gestion des tables, système de commandes, authentification sécurisée, gestion des stocks, rapports analytiques et chatbot IA intégré.</p>
-                    <div class="project-achievements">
-                        <span class="achievement">✓ Gestion complète des réservations et tables</span>
-                        <span class="achievement">✓ Système de commandes avec workflow</span>
-                        <span class="achievement">✓ Chatbot IA avec NLP</span>
-                        <span class="achievement">✓ Rapports et analytics</span>
+                    <div class="project-content-wrapper">
+                        <div class="project-left">
+                            <div class="project-header">
+                                <h3>Resto'N - SAE 3.02</h3>
+                                <p class="project-subtitle">Système de Gestion de Restaurant - Full Stack</p>
+                            </div>
+                            <p class="project-description">Projet académique d'envergure : développement complet d'une plateforme de gestion de restaurant. Implémentation des réservations, gestion des tables, système de commandes, authentification sécurisée, gestion des stocks, rapports analytiques et chatbot IA intégré.</p>
+                            <div class="project-achievements">
+                                <span class="achievement">✓ Gestion complète des réservations et tables</span>
+                                <span class="achievement">✓ Système de commandes avec workflow</span>
+                                <span class="achievement">✓ Chatbot IA avec NLP</span>
+                                <span class="achievement">✓ Rapports et analytics</span>
+                            </div>
+                        </div>
+                        <div class="project-right">
+                            <div class="carousel-container" data-project="restoN">
+                                <div class="carousel">
+                                    <div class="carousel-inner">
+                                        <img src="assets/img/restoN-home.png" alt="Resto'N - Accueil" class="carousel-slide active">
+                                        <img src="assets/img/restoN-reservation.png" alt="Resto'N - Réservations" class="carousel-slide">
+                                        <img src="assets/img/restoN-commande.png" alt="Resto'N - Commandes" class="carousel-slide">
+                                        <img src="assets/img/restoN-stock.png" alt="Resto'N - Stock" class="carousel-slide">
+                                        <img src="assets/img/restoN-panel_admin.png" alt="Resto'N - Panel Admin" class="carousel-slide">
+                                    </div>
+                                    <button class="carousel-control prev" aria-label="Image précédente">❮</button>
+                                    <button class="carousel-control next" aria-label="Image suivante">❯</button>
+                                    <div class="carousel-indicators">
+                                        <span class="indicator active" data-slide="0"></span>
+                                        <span class="indicator" data-slide="1"></span>
+                                        <span class="indicator" data-slide="2"></span>
+                                        <span class="indicator" data-slide="3"></span>
+                                        <span class="indicator" data-slide="4"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-tech">
                         <span>Full Stack</span>
@@ -335,15 +379,35 @@
                 </div>
 
                 <div class="project-card">
-                    <div class="project-header">
-                        <h3>Space Invaders Like</h3>
-                        <p class="project-subtitle">Jeu Arcade - JavaScript/Phaser</p>
-                    </div>
-                    <p class="project-description">Jeu arcade type Space Invaders développé avec Phaser 3. Démontre ma maîtrise du game development en JavaScript, avec gestion des collisions, animations et systèmes de scoring.</p>
-                    <div class="project-tech">
-                        <span>JavaScript</span>
-                        <span>Phaser 3</span>
-                        <span>Vite</span>
+                    <div class="project-content-wrapper">
+                        <div class="project-left">
+                            <div class="project-header">
+                                <h3>Space Invaders Like</h3>
+                                <p class="project-subtitle">Jeu Arcade - JavaScript/Phaser</p>
+                            </div>
+                            <p class="project-description">Jeu arcade type Space Invaders développé avec Phaser 3. Démontre ma maîtrise du game development en JavaScript, avec gestion des collisions, animations et systèmes de scoring.</p>
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>Phaser 3</span>
+                                <span>Vite</span>
+                            </div>
+                        </div>
+                        <div class="project-right">
+                            <div class="carousel-container" data-project="space_invaders">
+                                <div class="carousel">
+                                    <div class="carousel-inner">
+                                        <img src="assets/img/space_invaders-game.png" alt="Space Invaders - Gameplay" class="carousel-slide active">
+                                        <img src="assets/img/space_invaders-game_over.png" alt="Space Invaders - Game Over" class="carousel-slide">
+                                    </div>
+                                    <button class="carousel-control prev" aria-label="Image précédente">❮</button>
+                                    <button class="carousel-control next" aria-label="Image suivante">❯</button>
+                                    <div class="carousel-indicators">
+                                        <span class="indicator active" data-slide="0"></span>
+                                        <span class="indicator" data-slide="1"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/RX7BRAPBRAP/spaceInvaders_like" target="_blank" class="link-btn secondary">Voir sur GitHub</a>
@@ -351,16 +415,38 @@
                 </div>
 
                 <div class="project-card">
-                    <div class="project-header">
-                        <h3>Gestionnaire de Catalogue de Jeux</h3>
-                        <p class="project-subtitle">Full Stack - PHP & MySQL</p>
-                    </div>
-                    <p class="project-description">Application web complète pour gérer un catalogue de jeux vidéo. Développée avec Symfony, inclut authentification, gestion des genres/catégories, système CRUD complet et interface responsive.</p>
-                    <div class="project-tech">
-                        <span>PHP (Symfony)</span>
-                        <span>MySQL</span>
-                        <span>Bootstrap</span>
-                        <span>CSS3</span>
+                    <div class="project-content-wrapper">
+                        <div class="project-left">
+                            <div class="project-header">
+                                <h3>Gestionnaire de Catalogue de Jeux</h3>
+                                <p class="project-subtitle">Full Stack - PHP & MySQL</p>
+                            </div>
+                            <p class="project-description">Application web complète pour gérer un catalogue de jeux vidéo. Développée avec Symfony, inclut authentification, gestion des genres/catégories, système CRUD complet et interface responsive.</p>
+                            <div class="project-tech">
+                                <span>PHP (Symfony)</span>
+                                <span>MySQL</span>
+                                <span>Bootstrap</span>
+                                <span>CSS3</span>
+                            </div>
+                        </div>
+                        <div class="project-right">
+                            <div class="carousel-container" data-project="game">
+                                <div class="carousel">
+                                    <div class="carousel-inner">
+                                        <img src="assets/img/game-home.png" alt="Catalogue de Jeux - Accueil" class="carousel-slide active">
+                                        <img src="assets/img/game-catg.png" alt="Catalogue de Jeux - Catégories" class="carousel-slide">
+                                        <img src="assets/img/game-game_page.png" alt="Catalogue de Jeux - Page Jeu" class="carousel-slide">
+                                    </div>
+                                    <button class="carousel-control prev" aria-label="Image précédente">❮</button>
+                                    <button class="carousel-control next" aria-label="Image suivante">❯</button>
+                                    <div class="carousel-indicators">
+                                        <span class="indicator active" data-slide="0"></span>
+                                        <span class="indicator" data-slide="1"></span>
+                                        <span class="indicator" data-slide="2"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/RX7BRAPBRAP/game_catalog_manager" target="_blank" class="link-btn secondary">Voir sur GitHub</a>
@@ -368,15 +454,39 @@
                 </div>
 
                 <div class="project-card">
-                    <div class="project-header">
-                        <h3>Jeu du Solitaire aux Billes</h3>
-                        <p class="project-subtitle">Game Development - Python/PyGame</p>
-                    </div>
-                    <p class="project-description">Implémentation du classique jeu de solitaire aux billes en Python avec interface graphique PyGame. Inclut logique de jeu, détection de mouvements et système de scoring.</p>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>PyGame</span>
-                        <span>Sphinx</span>
+                    <div class="project-content-wrapper">
+                        <div class="project-left">
+                            <div class="project-header">
+                                <h3>Jeu du Solitaire aux Billes</h3>
+                                <p class="project-subtitle">Game Development - Python/PyGame</p>
+                            </div>
+                            <p class="project-description">Implémentation du classique jeu de solitaire aux billes en Python avec interface graphique PyGame. Inclut logique de jeu, détection de mouvements et système de scoring.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>PyGame</span>
+                                <span>Sphinx</span>
+                            </div>
+                        </div>
+                        <div class="project-right">
+                            <div class="carousel-container" data-project="peg_sol">
+                                <div class="carousel">
+                                    <div class="carousel-inner">
+                                        <img src="assets/img/peg_sol-anglaise_mode_normal.png" alt="Solitaire - Mode Anglais" class="carousel-slide active">
+                                        <img src="assets/img/peg_sol-allemand_mode_avance2.png" alt="Solitaire - Mode Allemand" class="carousel-slide">
+                                        <img src="assets/img/peg_sol-asym_mode_avance1.png" alt="Solitaire - Mode Asymétrique" class="carousel-slide">
+                                        <img src="assets/img/peg_sol-diamant_mode_avance3.png" alt="Solitaire - Mode Diamant" class="carousel-slide">
+                                    </div>
+                                    <button class="carousel-control prev" aria-label="Image précédente">❮</button>
+                                    <button class="carousel-control next" aria-label="Image suivante">❯</button>
+                                    <div class="carousel-indicators">
+                                        <span class="indicator active" data-slide="0"></span>
+                                        <span class="indicator" data-slide="1"></span>
+                                        <span class="indicator" data-slide="2"></span>
+                                        <span class="indicator" data-slide="3"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/RX7BRAPBRAP/game_pegSolitaire" target="_blank" class="link-btn secondary">Voir sur GitHub</a>
@@ -384,15 +494,31 @@
                 </div>
 
                 <div class="project-card">
-                    <div class="project-header">
-                        <h3>Générateur de Labyrinthe</h3>
-                        <p class="project-subtitle">Algorithmes & Visualisation</p>
-                    </div>
-                    <p class="project-description">Projet d'algorithmes implémentant des générateurs de labyrinthe avec visualisation. Démontre ma compréhension des structures de données et algorithmes complexes.</p>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>Jupyter Notebook</span>
-                        <span>Visualisation</span>
+                    <div class="project-content-wrapper">
+                        <div class="project-left">
+                            <div class="project-header">
+                                <h3>Générateur de Labyrinthe</h3>
+                                <p class="project-subtitle">Algorithmes & Visualisation</p>
+                            </div>
+                            <p class="project-description">Projet d'algorithmes implémentant des générateurs de labyrinthe avec visualisation. Démontre ma compréhension des structures de données et algorithmes complexes.</p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Jupyter Notebook</span>
+                                <span>Visualisation</span>
+                            </div>
+                        </div>
+                        <div class="project-right">
+                            <div class="carousel-container" data-project="maze">
+                                <div class="carousel">
+                                    <div class="carousel-inner">
+                                        <img src="assets/img/maze-resolution.png" alt="Labyrinthe - Résolution" class="carousel-slide active">
+                                    </div>
+                                    <div class="carousel-indicators">
+                                        <span class="indicator active" data-slide="0"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/RX7BRAPBRAP/maze" target="_blank" class="link-btn secondary">Voir sur GitHub</a>
@@ -400,16 +526,32 @@
                 </div>
 
                 <div class="project-card">
-                    <div class="project-header">
-                        <h3>Portfolio Personnel</h3>
-                        <p class="project-subtitle">Design & Développement Front-End</p>
-                    </div>
-                    <p class="project-description">Portfolio personnel moderne et responsive showcasing mes projets et compétences. Développé avec HTML5, CSS3 et JavaScript vanilla. Démontre mes talents en design UX/UI, animations fluides et responsive design.</p>
-                    <div class="project-tech">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>Responsive Design</span>
+                    <div class="project-content-wrapper">
+                        <div class="project-left">
+                            <div class="project-header">
+                                <h3>Portfolio Personnel</h3>
+                                <p class="project-subtitle">Design & Développement Front-End</p>
+                            </div>
+                            <p class="project-description">Portfolio personnel moderne et responsive showcasing mes projets et compétences. Développé avec HTML5, CSS3 et JavaScript vanilla. Démontre mes talents en design UX/UI, animations fluides et responsive design.</p>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>Responsive Design</span>
+                            </div>
+                        </div>
+                        <div class="project-right">
+                            <div class="carousel-container" data-project="portfolio">
+                                <div class="carousel">
+                                    <div class="carousel-inner">
+                                        <img src="assets/img/preview.png" alt="Portfolio - Aperçu" class="carousel-slide active">
+                                    </div>
+                                    <div class="carousel-indicators">
+                                        <span class="indicator active" data-slide="0"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="project-links">
                         <a href="#" class="link-btn secondary">Voir en ligne</a>
@@ -459,6 +601,6 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
