@@ -6,7 +6,6 @@
 
 :root {
     --primary: #FFD700;
-    --secondary: #0057AD;
     --dark: #1a1a1a;
     --darker: #0f0f0f;
     --light: #ffffff;
@@ -247,9 +246,29 @@ nav a:hover::after {
     gap: 2rem;
     overflow: hidden;
     position: relative;
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(0, 87, 173, 0.05) 100%);
+    background: linear-gradient(135deg, 
+        rgba(255, 215, 0, 0.1) 0%, 
+        rgba(0, 87, 173, 0.15) 50%,
+        rgba(255, 107, 53, 0.08) 100%);
     text-align: center;
     width: 100%;
+    box-shadow: inset 0 0 60px rgba(255, 215, 0, 0.05);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(0deg, transparent 24%, rgba(255, 215, 0, 0.05) 25%, rgba(255, 215, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 215, 0, 0.05) 75%, rgba(255, 215, 0, 0.05) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, rgba(255, 215, 0, 0.05) 25%, rgba(255, 215, 0, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 215, 0, 0.05) 75%, rgba(255, 215, 0, 0.05) 76%, transparent 77%, transparent);
+    background-size: 50px 50px;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .hero-content {
@@ -418,22 +437,34 @@ nav a:hover::after {
 
 .hero-animation {
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     top: 50%;
-    right: 5%;
+    right: -5%;
     transform: translateY(-50%);
-    opacity: 0.3;
+    opacity: 0.15;
+    animation: float 6s ease-in-out infinite;
+    z-index: 5;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(-50%) translateX(0px);
+    }
+    50% {
+        transform: translateY(-50%) translateX(-30px);
+    }
 }
 
 .floating-shape {
     position: absolute;
-    width: 300px;
-    height: 300px;
-    background: linear-gradient(135deg, var(--primary), #FF6B35);
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle at 30% 30%, var(--primary), transparent 70%),
+                radial-gradient(circle at 70% 70%, #FF6B35, transparent 70%);
     border-radius: 50%;
-    opacity: 0.2;
-    filter: blur(40px);
+    opacity: 0.25;
+    filter: blur(60px);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -442,13 +473,20 @@ nav a:hover::after {
 /* About Section */
 .about {
     padding: 6rem 0;
-    background-color: var(--gray);
+    background-color: var(--darker);
     position: relative;
     z-index: 1;
 }
 
 .about h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
     text-align: center;
+    background: linear-gradient(135deg, var(--primary), #FF6B35);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .about-content {
@@ -476,7 +514,7 @@ nav a:hover::after {
     margin: 0 auto;
 }
 
-.education-section h3 {
+.education-section h2 {
     font-size: 2rem;
     margin-bottom: 3rem;
     text-align: left;
@@ -592,6 +630,23 @@ nav a:hover::after {
     color: #bbb;
     line-height: 1.6;
     margin: 0;
+}
+
+/* Education Section */
+.education {
+    padding: 6rem 0;
+    background-color: var(--gray);
+}
+
+.education h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary), #FF6B35);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /* Skills Section */
@@ -710,6 +765,10 @@ nav a:hover::after {
     font-weight: 700;
     margin-bottom: 3rem;
     text-align: center;
+    background: linear-gradient(135deg, var(--primary), #FF6B35);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .projects-grid {
@@ -1019,15 +1078,19 @@ nav a:hover::after {
 /* Contact Section */
 .contact {
     padding: 6rem 0;
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(255, 107, 53, 0.05));
+    background-color: var(--darker);
     text-align: center;
 }
 
 .contact h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     text-align: center;
+    background: linear-gradient(135deg, var(--primary), #FF6B35);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .contact-intro {
@@ -1256,24 +1319,22 @@ nav a:hover::after {
 
     nav .cv-btn-nav {
         width: 100%;
-        justify-content: flex-start;
         padding: 0.5rem 0;
+        text-align: left;
     }
 
     nav .cv-menu-nav {
         position: static;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
         background-color: rgba(255, 215, 0, 0.05);
         border: 1px solid rgba(255, 215, 0, 0.1);
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
     }
 
-    nav.mobile-open .cv-menu-nav {
+    nav .cv-dropdown.active .cv-menu-nav {
         opacity: 1;
         visibility: visible;
+        transform: none;
     }
 
     nav .cv-option-nav {
