@@ -701,7 +701,6 @@ nav a:hover::after {
     border-radius: 12px;
     text-align: center;
     transition: all 0.3s ease;
-    cursor: pointer;
 }
 
 .skill-item-card i {
